@@ -37,3 +37,27 @@ if (navbarLinks.length) {
 		});
 	});
 }
+
+/**
+ * Scroll Reveal Animation
+ */
+import ScrollReveal from 'scrollreveal';
+
+ScrollReveal().reveal('.content-title', {
+	reset: false,
+	opacity: 0,
+	origin: 'bottom',
+	distance: '80%',
+	easing: 'ease-in-out',
+	duration: 1550,
+	delay: 250,
+});
+ScrollReveal().reveal('.content-buttons', {
+	reset: false,
+	opacity: 0,
+	origin: 'bottom',
+	distance: '90%',
+	easing: 'ease-in-out',
+	duration: 1350,
+	delay: 750,
+});
