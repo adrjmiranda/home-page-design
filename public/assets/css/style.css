@@ -1,0 +1,47 @@
+/***************** Imports *******************/
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/***************** Variables *******************/
+:root {
+	/* Colors */
+	--white-color-00: #fff;
+	--primary-color: #001449;
+	--secondary-color: #005bc5;
+
+	/* Font Family */
+	--main-ff: 'Sigmar', serif;
+	--text-ff: 'Rubik', serif;
+
+	/* Font Weight */
+	--normal-fw: 400;
+	--medium-fw: 500;
+
+	/* Linear Gradient */
+	--film-lg: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.95),
+		rgba(0, 0, 0, 0.15)
+	);
+}
+
+/***************** General *******************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	font-weight: var(--medium-fw);
+}
+
+ul {
+	list-style: none;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--main-ff);
+	font-weight: var(--normal-fw);
+}
