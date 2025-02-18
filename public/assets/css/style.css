@@ -17,6 +17,9 @@
 	--normal-fw: 400;
 	--medium-fw: 500;
 
+	/* Font Size */
+	--lg-fs: 1.1rem;
+
 	/* Linear Gradient */
 	--film-lg: linear-gradient(
 		to right,
@@ -34,11 +37,24 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: var(--text-ff);
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	color: var(--white-color-00);
+}
+
+body {
+	overflow-x: hidden;
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
 	font-weight: var(--medium-fw);
+	transition: 0.36s ease-in-out;
 }
 
 ul {
@@ -50,6 +66,12 @@ ul {
 	font-weight: var(--normal-fw);
 }
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 /***************** Reusable *******************/
 .container {
 	max-width: var(--container-mw);
@@ -57,13 +79,58 @@ ul {
 	margin: 0 auto;
 }
 
+.logo {
+	opacity: 0.55;
+}
+
+.logo img {
+	width: 70px;
+}
+
+.logo:hover {
+	opacity: 1;
+	transform: scale(1.05);
+}
+
 /***************** HOME *******************/
+#home {
+	background-image: var(--film-lg), url('../img/airplane.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
 
 /***************** NAVBAR *******************/
+.navbar-content {
+	display: flex;
+	justify-content: space-between;
+	padding-block: 1.75rem;
+}
+
+.navbar-menu {
+	display: flex;
+	gap: 1.75rem;
+	align-items: center;
+}
+
+.navbar-link {
+	font-size: var(--lg-fs);
+	font-weight: 400;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	padding: 0.35rem 0.45rem;
+	opacity: 0.65;
+}
+
+.navbar-link.active,
+.navbar-link:hover {
+	border-color: var(--white-color-00);
+	opacity: 1;
+}
 /************** End of NAVBAR ***************/
 
 /***************** CONTENT *******************/
-/* TODO: Create CONTENT style */
 /************** End of CONTENT ***************/
 
 /************** End of HOME ***************/
