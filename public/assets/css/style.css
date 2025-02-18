@@ -23,6 +23,10 @@
 		rgba(0, 0, 0, 0.95),
 		rgba(0, 0, 0, 0.15)
 	);
+
+	/* Width */
+	--container-mw: 1280px;
+	--container-pi: 0.85rem;
 }
 
 /***************** General *******************/
@@ -45,3 +49,21 @@ ul {
 	font-family: var(--main-ff);
 	font-weight: var(--normal-fw);
 }
+
+/***************** Reusable *******************/
+.container {
+	max-width: var(--container-mw);
+	padding-inline: var(--container-pi);
+	margin: 0 auto;
+}
+
+/***************** HOME *******************/
+
+/***************** NAVBAR *******************/
+/************** End of NAVBAR ***************/
+
+/***************** CONTENT *******************/
+/* TODO: Create CONTENT style */
+/************** End of CONTENT ***************/
+
+/************** End of HOME ***************/
