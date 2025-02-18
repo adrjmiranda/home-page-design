@@ -51,11 +51,22 @@ body {
 	overflow-x: hidden;
 }
 
+button {
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+button,
+a {
+	transition: 0.36s ease-in-out;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
 	font-weight: var(--medium-fw);
-	transition: 0.36s ease-in-out;
 }
 
 ul {
@@ -100,6 +111,10 @@ img {
 	font-size: var(--lg-fs);
 }
 
+.hidden {
+	display: none;
+}
+
 /***************** HOME *******************/
 #home {
 	background-image: var(--film-lg), url('../img/airplane.jpg');
@@ -116,6 +131,24 @@ img {
 	display: flex;
 	justify-content: space-between;
 	padding-block: 1.75rem;
+}
+
+#toggle-menu {
+	color: var(--white-color-00);
+	font-size: 1.75rem;
+	opacity: 0.75;
+	transition: 0.35s ease-in-out;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+#toggle-menu i {
+	pointer-events: none;
+}
+
+#toggle-menu:hover {
+	opacity: 1;
 }
 
 .navbar-menu {
@@ -184,3 +217,81 @@ img {
 /************** End of CONTENT ***************/
 
 /************** End of HOME ***************/
+
+/***************** Responsiveness *******************/
+@media screen and (max-width: 990px) {
+	/***************** Variables *******************/
+	:root {
+		--lg-fs: 0.9rem;
+		--xxl-fs: 3.15rem;
+	}
+
+	/***************** Reusable *******************/
+	.logo img {
+		width: 50px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	/***************** NAVBAR *******************/
+	#navbar {
+		position: relative;
+	}
+
+	.navbar-content {
+		flex-wrap: wrap;
+	}
+
+	#toggle-menu {
+		display: flex;
+	}
+
+	.navbar-menu {
+		display: none;
+	}
+
+	.navbar-menu.show {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		flex: 100%;
+		position: absolute;
+		gap: 0.88rem;
+		top: 5.75rem;
+		right: -1.5rem;
+		transform: translateX(-50%);
+	}
+	/************** End of NAVBAR ***************/
+}
+
+@media screen and (max-width: 576px) {
+	/***************** NAVBAR *******************/
+	.navbar-menu.show {
+		align-items: center;
+		right: unset;
+		left: 50%;
+	}
+	/************** End of NAVBAR ***************/
+
+	/***************** CONTENT *******************/
+	#content {
+		text-align: center;
+	}
+
+	.content-title {
+		margin-top: 5rem;
+	}
+
+	.content-buttons {
+		flex-direction: column;
+		gap: 0.95rem;
+		margin-top: 2.5rem;
+	}
+
+	.primary-btn,
+	.secondary-btn {
+		width: calc(98vw - 2 * var(--container-pi));
+		margin-left: calc(var(--container-pi) / 2);
+	}
+	/************** End of CONTENT ***************/
+}

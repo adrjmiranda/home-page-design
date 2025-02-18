@@ -1,0 +1,1 @@
+(()=>{var e=document.querySelector("#toggle-menu"),t=document.querySelector(".navbar-menu");e&&t&&e.addEventListener("click",(function(){t.classList.toggle("show"),e.querySelectorAll("i").forEach((function(e){e.classList.toggle("hidden")}))}))})();
