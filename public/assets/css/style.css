@@ -19,6 +19,7 @@
 
 	/* Font Size */
 	--lg-fs: 1.1rem;
+	--xxl-fs: 3.75rem;
 
 	/* Linear Gradient */
 	--film-lg: linear-gradient(
@@ -92,6 +93,13 @@ img {
 	transform: scale(1.05);
 }
 
+.btn {
+	border: 2px solid var(--white-color-00);
+	padding: 0.85rem 1.25rem;
+	text-transform: capitalize;
+	font-size: var(--lg-fs);
+}
+
 /***************** HOME *******************/
 #home {
 	background-image: var(--film-lg), url('../img/airplane.jpg');
@@ -99,6 +107,8 @@ img {
 	background-position: center;
 	background-repeat: no-repeat;
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /***************** NAVBAR *******************/
@@ -131,6 +141,46 @@ img {
 /************** End of NAVBAR ***************/
 
 /***************** CONTENT *******************/
+#content {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex: 1;
+}
+
+.content-title {
+	font-size: var(--xxl-fs);
+	text-transform: uppercase;
+}
+
+.content-buttons {
+	display: flex;
+	gap: 2rem;
+}
+
+.primary-btn {
+	background-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+	background-color: var(--secondary-color);
+}
+
+.secondary-btn {
+	background-color: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+	background-color: var(--primary-color);
+}
 /************** End of CONTENT ***************/
 
 /************** End of HOME ***************/
