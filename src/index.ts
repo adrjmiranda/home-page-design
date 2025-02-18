@@ -15,3 +15,25 @@ if (toggleMenuButton && navbarMenu) {
 		});
 	});
 }
+
+/**
+ * Change Link Style After Click
+ */
+const navbarLinks = document.querySelectorAll(
+	'.navbar-link'
+) as NodeListOf<HTMLAnchorElement>;
+
+const ACTIVE_CLASS: string = 'active';
+
+if (navbarLinks.length) {
+	const clearActiveClass = () => {
+		navbarLinks.forEach((link) => link.classList.remove(ACTIVE_CLASS));
+	};
+
+	navbarLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			clearActiveClass();
+			link.classList.add(ACTIVE_CLASS);
+		});
+	});
+}
